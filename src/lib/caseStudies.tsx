@@ -66,8 +66,14 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
         variant: "ember",
         icon: "github",
       },
+      {
+        label: "Colab Notebook",
+        href: "https://colab.research.google.com/drive/1ppb72S9oLWh7UGpoLd56jJe3LlRw2704",
+        variant: "muted",
+        icon: "arrow",
+      },
     ],
-    image: "/assets/shots/basalt.webp",
+    image: "/assets/shots/cat-net.png",
     alt: "CAT-Net ECG classifier screenshot",
     objectClass: "object-top",
     body: [
@@ -148,7 +154,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
         icon: "github",
       },
     ],
-    image: "/assets/shots/ats-screener.webp",
+    image: "/assets/shots/brightside.jpg",
     alt: "BrightSide platform screenshot",
     objectClass: "object-top",
     body: [
@@ -228,8 +234,14 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
         variant: "ember",
         icon: "github",
       },
+      {
+        label: "Colab Notebook",
+        href: "https://colab.research.google.com/drive/1AkHdBWzX-5ck_BSfR0W4rFfcLS9A8dLp",
+        variant: "muted",
+        icon: "arrow",
+      },
     ],
-    image: "/assets/sunnify.webp",
+    image: "/assets/shots/h2-leak.png",
     alt: "H2 Leak Detector screenshot",
     objectClass: "object-top",
     body: [
@@ -284,6 +296,209 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
       "NumPy",
       "pandas",
       "Docker",
+    ],
+    next: { slug: "audio-fingerprinting", title: "Mantra Fingerprinter" },
+  },
+
+  "audio-fingerprinting": {
+    slug: "audio-fingerprinting",
+    title: "Mantra Fingerprinter",
+    year: "2024",
+    tagline: "Real-time audio fingerprinting for sung mantras",
+    active: false,
+    lead: (
+      <>
+        A real-time audio fingerprinting system that identifies and verifies
+        sung mantras by converting each recording into a compact spectral
+        signature — robust to shifts in pitch, tempo, and vocal character, and
+        resilient to background noise and overlapping sound. Published research
+        at R.V. College of Engineering.
+      </>
+    ),
+    links: [
+      {
+        label: "Source",
+        href: "https://github.com/ChinmayaBJ",
+        variant: "ember",
+        icon: "github",
+      },
+    ],
+    image: "/assets/shots/audio-fingerprinting.png",
+    alt: "Mantra fingerprinting spectrogram — time versus frequency",
+    objectClass: "object-center",
+    body: [
+      <p key="a1">
+        Recognizing a sung mantra is harder than matching a studio track: the
+        same mantra varies in {Em("pitch, tempo, and vocal timbre")} every time
+        it is chanted, and recordings arrive with ambient noise and overlapping
+        voices. A naive waveform or exact-match approach collapses under this
+        variability. The fingerprinter instead reduces each clip to a compact,
+        noise-tolerant representation that survives these transformations.
+      </p>,
+      <p key="a2">
+        The pipeline converts audio into a {Em("time–frequency spectrogram")},
+        extracts spectral peak constellations that are stable under pitch and
+        speed changes, and hashes them into a compact fingerprint. Query
+        fingerprints are matched against a reference database using a
+        time-offset voting scheme, so a correct match accumulates aligned peak
+        pairs even when the chant is faster, slower, or in a different key.
+      </p>,
+      <p key="a3">
+        Because the fingerprint keys on relative peak structure rather than
+        absolute frequency, the system stays accurate across singers and
+        recording conditions, and tolerates partial overlap with other audio.
+        The work was carried out and published as research at R.V. College of
+        Engineering.
+      </p>,
+    ],
+    highlights: [
+      <>Spectral peak-constellation fingerprints robust to pitch and tempo shifts</>,
+      <>Time-offset voting match scheme tolerant of noise and overlapping audio</>,
+      <>Compact hashed signatures enable fast matching against a reference database</>,
+      <>Accurate across different singers and recording conditions</>,
+      <>Published research — R.V. College of Engineering</>,
+    ],
+    builtWith: [
+      "Python",
+      "NumPy",
+      "SciPy",
+      "librosa",
+      "Spectrogram Analysis",
+      "DSP",
+    ],
+    next: { slug: "sap-agent-catalog", title: "SAP Agent Catalog" },
+  },
+
+  "sap-agent-catalog": {
+    slug: "sap-agent-catalog",
+    title: "SAP Agent Catalog",
+    year: "2026",
+    tagline: "60+ governed AI agents on SAP BTP Cloud Foundry",
+    active: true,
+    lead: (
+      <>
+        An automated AI agent catalog built on SAP BTP Cloud Foundry that
+        replaced a manual SharePoint workflow — adding semantic search, approval
+        workflows, and a 15-minute sync cycle that cut data staleness from 2–3
+        days to under 30 minutes, saving roughly 5 hours a week.
+      </>
+    ),
+    links: [
+      {
+        label: "Source",
+        href: "https://github.com/ChinmayaBJ",
+        variant: "ember",
+        icon: "github",
+      },
+    ],
+    image: "/assets/shots/netdash.webp",
+    alt: "SAP Agent Catalog dashboard",
+    objectClass: "object-top",
+    body: [
+      <p key="s1">
+        Tracking 60+ internal AI agents in a SharePoint list meant catalog
+        entries drifted out of date by {Em("2–3 days")}, discovery relied on
+        manual keyword hunting, and onboarding a new agent was an untracked,
+        ad-hoc process. The catalog replaces that workflow with a governed
+        application on SAP BTP Cloud Foundry.
+      </p>,
+      <p key="s2">
+        A {Em("15-minute sync cycle")} pulls agent metadata from source systems
+        so the catalog reflects reality within half an hour rather than days.
+        Semantic search lets teams find agents by capability instead of exact
+        name, and a structured approval workflow makes registering or promoting
+        an agent an auditable step rather than a spreadsheet edit.
+      </p>,
+      <p key="s3">
+        The result cut data staleness from 2–3 days to under 30 minutes and
+        saved roughly {Em("5 hours per week")} of manual catalog maintenance,
+        while giving the organization a single governed source of truth for its
+        agent fleet.
+      </p>,
+    ],
+    highlights: [
+      <>Governs 60+ internal AI agents on SAP BTP Cloud Foundry</>,
+      <>15-minute sync cycle cut data staleness from 2–3 days to under 30 minutes</>,
+      <>Semantic search by capability replaces manual keyword lookup</>,
+      <>Structured approval workflow makes agent registration auditable</>,
+      <>Saved ~5 hours/week of manual catalog maintenance</>,
+    ],
+    builtWith: [
+      "SAP BTP",
+      "Cloud Foundry",
+      "Python",
+      "Semantic Search",
+      "REST APIs",
+      "SAP HANA",
+    ],
+    next: { slug: "ransomware-detector", title: "Ransomware Detector" },
+  },
+
+  "ransomware-detector": {
+    slug: "ransomware-detector",
+    title: "Ransomware Detector",
+    year: "2023",
+    tagline: "Benchmarking 20+ ransomware variants — IEEE ICACRS",
+    active: false,
+    lead: (
+      <>
+        A systematic benchmarking study of enterprise ransomware detection and
+        response, simulating 20+ variants — including LockBit, Ryuk, and
+        WannaCry — under controlled conditions to measure time-to-detect,
+        accuracy, and encryption speed. Published at IEEE ICACRS 2023 and cited
+        by 7 papers, including Forensic Science International.
+      </>
+    ),
+    links: [
+      {
+        label: "IEEE Paper",
+        href: "https://ieeexplore.ieee.org",
+        variant: "ember",
+        icon: "arrow",
+      },
+    ],
+    image: "/assets/shots/ransomware-detector.png",
+    alt: "Encrypted files produced by a simulated ransomware run",
+    objectClass: "object-center",
+    team: "Benchmarked alongside Dell's Senior Architect to inform real enterprise threat modelling.",
+    body: [
+      <p key="r1">
+        Enterprises choose detection and response platforms largely on vendor
+        claims, with little controlled evidence on how they behave against
+        modern ransomware. This study builds that evidence by simulating{" "}
+        {Em("20+ ransomware variants")} — LockBit, Ryuk, WannaCry, and 17 others
+        — in a contained environment and measuring how detection frameworks
+        actually respond.
+      </p>,
+      <p key="r2">
+        Each variant was executed under controlled conditions using tooling such
+        as TeamViewer and 7z to stage realistic attack behaviour, while
+        HostedScan was used to detect and categorize the resulting risks across
+        levels, vulnerabilities, IPs, ports, and hostnames. For every run the
+        study recorded {Em("time-to-detect, detection accuracy, and encryption-speed thresholds")}.
+      </p>,
+      <p key="r3">
+        The measurements feed a {Em("risk-weighted selection model")} that helps
+        enterprise security architects compare EDR platforms on observed
+        behaviour rather than marketing. The work was published at IEEE ICACRS
+        2023 and has since been cited by 7 papers, including Forensic Science
+        International.
+      </p>,
+    ],
+    highlights: [
+      <>Simulated 20+ variants including LockBit, Ryuk, and WannaCry</>,
+      <>Measured time-to-detect, accuracy, and encryption-speed thresholds</>,
+      <>Risk-weighted selection model for comparing enterprise EDR platforms</>,
+      <>Published at IEEE ICACRS 2023; cited by 7 papers</>,
+      <>Benchmarked alongside Dell&apos;s Senior Architect</>,
+    ],
+    builtWith: [
+      "Cybersecurity",
+      "EDR",
+      "HostedScan",
+      "Threat Modelling",
+      "TeamViewer",
+      "Windows",
     ],
     next: { slug: "cat-net", title: "CAT-Net" },
   },

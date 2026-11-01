@@ -49,9 +49,9 @@ const FEATURED: Featured[] = [
     tagline: "97% accuracy ECG arrhythmia classification",
     desc: "An end-to-end ML pipeline on the MIT-BIH Arrhythmia Database using single-lead (MLII) ECG. Designed CAT-Net — a custom CNN + Attention + Transformer model of 1.8M parameters — achieving 97% average accuracy and 93% average F1 across 5 arrhythmia classes (N, S, V, F, Q). Built wavelet (DWT) denoising, R-peak detection, heartbeat segmentation, and addressed severe class imbalance by benchmarking SMOTEENN, ADASYN, and SMOTETomek.",
     tech: ["Python", "TensorFlow", "PyTorch", "CNN", "Attention", "Transformer", "MIT-BIH", "Google Colab"],
-    image: "/assets/shots/basalt.webp",
+    image: "/assets/shots/cat-net.png",
     links: [
-      { kind: "plain", label: "Colab Notebook", href: "https://colab.research.google.com" },
+      { kind: "plain", label: "Colab Notebook", href: "https://colab.research.google.com/drive/1ppb72S9oLWh7UGpoLd56jJe3LlRw2704" },
     ],
   },
   {
@@ -62,7 +62,7 @@ const FEATURED: Featured[] = [
     tagline: "AI debate coaching with emotional intelligence",
     desc: "A real-time, web-based platform pairing end-to-end debate coaching with emotional-intelligence training. Integrated sentiment analysis, NLP, and a transformer-based chatbot (GPT, BERT) to assess argument structure, emotional tone, and empathy. Introduced novel feedback metrics including voice pitch, delivering real-time feedback. Published as an IEEE paper (Nov 2025) showing improved emotional control and higher student engagement.",
     tech: ["BERT", "GPT", "NLP", "Sentiment Analysis", "Python", "React", "Speech Recognition"],
-    image: "/assets/shots/ats-screener.webp",
+    image: "/assets/shots/brightside.jpg",
     reverse: true,
     links: [
       { kind: "plain", label: "IEEE Paper", href: "https://ieeexplore.ieee.org" },
@@ -77,9 +77,9 @@ const FEATURED: Featured[] = [
     tagline: "ML pipeline for hydrogen safety anomaly detection",
     desc: "An end-to-end ML pipeline on a time-synchronized 1 Hz multi-sensor dataset (405 samples, 24 channels) from an EU hydrogen-safety research experiment. Trained a Random Forest with 5-fold CV R² = 0.996 and an LSTM sequence regressor; random-search tuning cut LSTM CV RMSE by ~48% (1.03 → 0.53). Applied Isolation Forest (10% contamination) to flag anomalies without ground-truth labels. Ranked features with five importance methods — CH3 pressure was the strongest predictor.",
     tech: ["Python", "scikit-learn", "TensorFlow/Keras", "LSTM", "Pandas", "Isolation Forest", "Time-Series"],
-    image: "/assets/sunnify.webp",
+    image: "/assets/shots/h2-leak.png",
     links: [
-      { kind: "plain", label: "Colab Notebook", href: "https://colab.research.google.com" },
+      { kind: "plain", label: "Colab Notebook", href: "https://colab.research.google.com/drive/1AkHdBWzX-5ck_BSfR0W4rFfcLS9A8dLp" },
       { kind: "source", href: "https://github.com/ChinmayaBJ" },
     ],
   },
@@ -105,8 +105,8 @@ const MORE: More[] = [
     tagline: "Real-time audio fingerprinting for sung mantras",
     extra: "Published research — R.V. College of Engineering",
     desc: "A real-time system that identifies and verifies sung mantras in audio recordings by converting signals into compact fingerprints matched against a database. Stays accurate despite variations in pitch, speed, and vocal characteristics, tolerating noise and overlapping sounds.",
-    image: "/assets/shots/axelot.webp",
-    objectClass: "object-top",
+    image: "/assets/shots/audio-fingerprinting.png",
+    objectClass: "object-center",
   },
   {
     slug: "sap-agent-catalog",
@@ -123,7 +123,7 @@ const MORE: More[] = [
     year: "2023",
     tagline: "Benchmarking 20+ ransomware variants — IEEE ICACRS",
     desc: "Simulated Lockbit, Ryuk, WannaCry and 17+ other variants to benchmark enterprise detection. Measured TTD, accuracy, and encryption speed. Published at IEEE ICACRS 2023, cited by 7 papers including Forensic Science International.",
-    image: "/assets/knifethrow.webp",
+    image: "/assets/shots/ransomware-detector.png",
     objectClass: "object-center",
   },
 ];
